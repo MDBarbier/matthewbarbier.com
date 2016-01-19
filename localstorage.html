@@ -15,6 +15,28 @@
 		
 		<!--my custom css-->
 		<link rel="stylesheet" type="text/css" href="matt.css">
+		
+		
+		<script type="text/javascript">
+		
+		window.onload = function()
+		{
+		
+			// Check browser support
+			if (typeof(Storage) != "undefined") 
+			{
+				// Store
+				localStorage.setItem("myVar", "Local Storage works!");
+				
+				// Retrieve
+				document.getElementById("result").innerHTML = localStorage.getItem("myVar");
+			}
+			else 
+			{
+				document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+			}
+		}
+		</script>
 </head>
 
 <body>
@@ -22,15 +44,12 @@
   <div class="row">
     <div class="col-md-12">
       <div class="voffset7">
-	  <h1 class="jumbotron">Sitemap of matthewbarbier.com</h1>
+	  <h1 class="jumbotron">HTML5 Local Storage Test Page</h1>
+	  <br />
+	  <img src="HTML5logo.png" />
 	  <br />
 	  <br />
-	  <p><a href="maps.html">My maps</a></p>
-	  <p><a href="tr8r.html">Favourite TR-8R memes</a>
-	  <p><a href="sitemap.html">Sitemap</a> (you are here)</p>
-	  <p><a href="http://www.matthewbarbier.com/testphp">Test PHP</a></p>
-	  <p><a href="http://www.matthewbarbier.com/test-js.html">Test JavaScript</a></p>
-	  <p><a href="http://www.matthewbarbier.com/localstorage.html">Test HTML5 Local Storage</a></p>
+	  <p id="result">TESTING</p>
 	  <br />
 	  <br />
 	  <div class="voffset3"></div>
