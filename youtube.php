@@ -15,14 +15,6 @@
 
 		<!--my custom css-->
 		<link rel="stylesheet" type="text/css" href="matt.css">
-		
-		<script> 
-		
-		var referringURL = window.location.href;
-		var parameter = referringURL.split("?searchquery=");
-		window.location.replace("https://www.youtube.com/results?search_query=" + parameter[1]);
-		
-		</script>
 </head>
 
 <body>
@@ -30,7 +22,7 @@
   <div class="row">
     <div class="col-md-12">
       <div class="voffset7">
-	  <h1 class="jumbotron">Youtube search shortcut</h1>
+	  <h1 class="jumbotron">Welcome to matthewbarbier.com</h1>
 	  <noscript><p>You have javascript disabled... in 2016.... seriously?</p></noscript>
 	  <br />
 	  <br />
