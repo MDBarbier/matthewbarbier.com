@@ -1,0 +1,149 @@
+/*body {
+  background-image: url("Images\\sunset.JPG");
+  }
+
+  #bg {
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  width: 100%;
+  height: 100%;
+}
+#bg img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  min-width: 50%;
+  min-height: 50%;
+}
+
+#bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+   Preserve aspet ratio
+  min-width: 50%;
+  min-height: 50%;
+}*/
+
+
+#bg { position: fixed; top: 0; left: 0; }
+.bgwidth { width: 100%; }
+.bgheight { height: 100%; }
+
+/* ------------------------------------ */
+.voffset1 {
+  position: relative;
+  margin-top: 10px;
+}
+.voffset2 {
+  position: relative;
+  margin-top: 20px;
+}
+.voffset3 {
+  position: relative;
+  margin-top: 30px;
+}
+.voffset4 {
+  position: relative;
+  margin-top: 40px;
+}
+.voffset5 {
+  position: relative;
+  margin-top: 50px;
+}
+.voffset6 {
+  position: relative;
+  margin-top: 60px;
+}
+.voffset7 {
+  position: relative;
+  margin-top: 70px;
+}
+.voffset8 {
+  position: relative;
+  margin-top: 80px;
+}
+.voffset9 {
+  position: relative;
+  margin-top: 50px;
+}
+.voffset10 {
+  position: relative;
+  margin-top: 50px;
+}
+/* ------------------------------------ */
+
+.footer {
+  position: fixed;
+  left: 50%;
+  bottom: 3%;
+  margin-left: -100px;
+  font-family: 'Aileron-Bold';
+  font-size: 14px;
+  color: Snow;
+}
+
+.banner {
+  font-weight: bold;
+  font-family: 'Aileron-UltraLight';
+  font-size: 60px;
+  font-size: 4vw;
+}
+
+a:link, a:active, a:visited {
+  color: Black;
+  font-family: 'Aileron-SemiBold';
+  font-size: 14px;
+  text-decoration: none;
+}
+a:hover {
+  color: Snow;
+  font-family: 'Aileron-SemiBold';
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.nav {
+  position:fixed;
+  left: 2%;
+  top: 25%;
+}
+
+.nav-title {
+  font-family: 'Aileron-SemiBold';
+}
+
+.nav-item {
+  position: relative;
+  margin-left: 20%;
+  font-family: 'Aileron-Light';
+}
+
+.well {
+  background: Gray;
+}
+
+@font-face {
+    font-family: 'Aileron-Bold'; /*a name to be used later*/
+    src: url('Fonts\\Aileron-Bold.otf'); /*URL to font*/
+}
+
+@font-face {
+    font-family: 'Aileron-SemiBold'; /*a name to be used later*/
+    src: url('Fonts\\Aileron-SemiBold.otf'); /*URL to font*/
+}
+
+@font-face {
+    font-family: 'Aileron-Light'; /*a name to be used later*/
+    src: url('Fonts\\Aileron-Light.otf'); /*URL to font*/
+}
+
+@font-face {
+    font-family: 'Aileron-UltraLight'; /*a name to be used later*/
+    src: url('Fonts\\Aileron-UltraLight.otf'); /*URL to font*/
+}

@@ -15,38 +15,70 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
 		<!--my custom css-->
-		<link rel="stylesheet" type="text/css" href="matt.css">
+		<link rel="stylesheet" type="text/css" href="main-stylesheet.css">
+
+		<script>
+				$(window).load(function() {
+
+					var theWindow        = $(window),
+					$bg              = $("#bg"),
+					aspectRatio      = $bg.width() / $bg.height();
+
+					function resizeBg() {
+
+						if ( (theWindow.width() / theWindow.height()) < aspectRatio ) {
+							$bg
+							.removeClass()
+							.addClass('bgheight');
+						} else {
+							$bg
+							.removeClass()
+							.addClass('bgwidth');
+						}
+
+					}
+					theWindow.resize(resizeBg).trigger("resize");
+				});
+
+		</script>
 
 	</head>
 
 	<body>
 
+		<div>
+  		<img src="Images/sunset.JPG" alt="" id="bg">
+		</div>
+
+		<div id="nav" class="nav">
+
+					<h2 class="nav-title">menu<h2>
+					<a href="https://www.matthewbarbier.com/cpanel" target="_blank" class="nav-item">cPanel</a>
+					<a href="https://uk.linkedin.com/in/matthew-barbier-028939b5" target="_blank" class="nav-item">LinkedIn</a>
+
+		</div>
+
 		<div class="container text-center" id="error">
 			<div class="row">
 				<div class="col-md-12">
 					<div class="voffset7">
-						<h1 class="jumbotron">Welcome to matthewbarbier.com</h1>
-					</div>
-					<?php
+						<h1 class="banner">Welcome to matthewbarbier.com</h1>
 
-					if (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off')
-					{
-					    // SSL connection
-							echo "You are connected by a secure SSL session.<br />";
-							?><span id="siteseal"><script async type="text/javascript" src="https://seal.godaddy.com/getSeal?sealID=RoVsmY7ZZuqIUxcfBr3rWRui5QtVE5XLhISrqs07MozfVMNa8C6aNwnUYMaH"></script></span>
-							<script type="text/javascript" src="https://cdn.ywxi.net/js/1.js" async></script>
-							<?php
-					}
-					else {
-						echo "You do not have a secure connection!";
-					}
-					?>
-					<div class="well">
-						<span class="glyphicon glyphicon-cog"></span><a href="https://www.matthewbarbier.com/cpanel" target="_blank"> cPanel</a>
 					</div>
+
+					<div class="footer">
+
+							<?php
+							if (empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off')
+							{
+									echo "You do not have a secure SSL connection! \n";
+							}
+							?>
+
+					</div>
+
 				</div>
 			</div>
-
 		</div>
 
 	</body>

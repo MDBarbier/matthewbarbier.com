@@ -71,9 +71,9 @@ a {
  <div class="row">
     <div class="col-md-12">
       <div class="main-icon text-warning"><span class="uxicon uxicon-alert"></span></div>
-	<img src="HomerSimpson.png" />
+	<img src="Images\\HomerSimpson.png" />
         <h1>D'oh! 404.... What's a 404?</h1>
-        <p>The page "matthewbarbier.com<!--#echo var="REQUEST_URI" -->" 
+        <p>The page "matthewbarbier.com<!--#echo var="REQUEST_URI" -->"
 does not exist.</p>
     </div>
   </div>
