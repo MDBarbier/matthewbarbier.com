@@ -52,16 +52,29 @@
 
 		<div id="nav" class="nav">
 
-					<h2 class="nav-title">menu<h2>
-					<a href="https://www.matthewbarbier.com/cpanel" target="_blank" class="nav-item">cPanel</a>
-					<a href="https://uk.linkedin.com/in/matthew-barbier-028939b5" target="_blank" class="nav-item">LinkedIn</a>
-
+			<div class="row">
+				<div class="col-md-12">
+					<div data-toggle="collapse" data-target="#menuItemsDiv" class="nav-title"><span class="glyphicon glyphicon-menu-hamburger"></span></div>
+				</div>
+			</div>
+			<div class="collapse voffset2" id="menuItemsDiv">
+				<div class="row">
+					<div class="col-md-12">
+						<a href="https://www.matthewbarbier.com/cpanel" target="_blank"><p class="nav-item">cPanel</p></a>
+				  </div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<a href="https://uk.linkedin.com/in/matthew-barbier-028939b5" target="_blank"><p class="nav-item">LinkedIn</p></a>
+					</div>
+				</div>
+				</div>
 		</div>
 
 		<div class="container text-center" id="error">
 			<div class="row">
 				<div class="col-md-12">
-					<div class="voffset7">
+					<div class="voffset10">
 						<h1 class="banner">Welcome to matthewbarbier.com</h1>
 
 					</div>
