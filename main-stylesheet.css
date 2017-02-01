@@ -1,5 +1,11 @@
 
-#bg { position: fixed; top: 0; left: 0; }
+#bg 
+{ 
+	position: fixed; 
+	top: 0; 
+	left: 0;
+	z-index:-1;
+}
 .bgwidth { width: 100%; }
 .bgheight { height: 100%; }
 
@@ -57,6 +63,9 @@
 }
 
 .banner {
+  position: fixed;
+  left: 25%;
+  z-index: 1;
   font-weight: bold;
   font-family: 'Aileron-UltraLight';
   font-size: 60px;
@@ -78,6 +87,7 @@ a:hover {
 
 .nav {
   position:fixed;
+  z-index: 5;
   left: 2%;
   top: 5%;
 }

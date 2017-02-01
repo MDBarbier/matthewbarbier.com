@@ -42,6 +42,8 @@
 
 		</script>
 
+	<link rel="shortcut icon" type="image/x-icon" href="Images/site.ico" />
+	
 	</head>
 
 	<body>
@@ -66,6 +68,16 @@
 				<div class="row">
 					<div class="col-md-12">
 						<a href="https://uk.linkedin.com/in/matthew-barbier-028939b5" target="_blank"><p class="nav-item">LinkedIn</p></a>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<a href="https://www.flickr.com/photos/142604114@N06/" target="_blank"><p class="nav-item">Flickr</p></a>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<a href="https://github.com/SirBarbier?tab=repositories" target="_blank"><p class="nav-item">Github</p></a>
 					</div>
 				</div>
 				</div>
