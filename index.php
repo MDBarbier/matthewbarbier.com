@@ -80,6 +80,17 @@
 						<a href="https://github.com/SirBarbier?tab=repositories" target="_blank"><p class="nav-item">Github</p></a>
 					</div>
 				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<a href="https://jsfiddle.net/user/matt_b/fiddles/" target="_blank"><p class="nav-item">JSFiddle</p></a>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<a href="http://steamcommunity.com/id/MattadorUk" target="_blank"><p class="nav-item">Steam</p></a>
+					</div>
+				</div>
+				
 				</div>
 		</div>
 
