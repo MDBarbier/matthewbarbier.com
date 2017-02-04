@@ -90,13 +90,14 @@
 			</div>
 		</div>
 
+		<div class="voffset10" id="header">
+			<h1 class="banner">Welcome to matthewbarbier.com</h1>
+
+		</div>
+
 		<div class="container text-center">
 			<div class="row">
 				<div class="col-md-12">
-					<div class="voffset10" id="header">
-						<h1 class="banner">Welcome to matthewbarbier.com</h1>
-
-					</div>
 
 					<div class="footer">
 

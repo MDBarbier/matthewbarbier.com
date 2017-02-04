@@ -64,13 +64,14 @@
 
 .banner {
   position: fixed;
+	width: 100%;
+	text-align: center;
   /*left: 25%;*/
   z-index: 1;
   font-weight: bold;
   font-family: 'Aileron-UltraLight';
   font-size: 60px;
   font-size: 4vw;
-	text-align: center;
 }
 
 a:link, a:active, a:visited {
@@ -144,7 +145,7 @@ a.navLinkAlt:hover {color: Black;}
 	position:fixed;
   z-index: 5;
   right: 2%;
-  top: 5%;	
+  top: 5%;
 }
 
 .changeBGAlt {
