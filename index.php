@@ -17,87 +17,83 @@
 		<!--my custom css-->
 		<link rel="stylesheet" type="text/css" href="main-stylesheet.css">
 
-		<script>
-				$(window).load(function() {
+		<!-- my .js library -->
+		<script src="Scripts/library.js"></script>
 
-					var theWindow        = $(window),
-					$bg              = $("#bg"),
-					aspectRatio      = $bg.width() / $bg.height();
+		<!--Site icon-->
+		<link rel="shortcut icon" type="image/x-icon" href="Images/site.ico" />
 
-					function resizeBg() {
-
-						if ( (theWindow.width() / theWindow.height()) < aspectRatio ) {
-							$bg
-							.removeClass()
-							.addClass('bgheight');
-						} else {
-							$bg
-							.removeClass()
-							.addClass('bgwidth');
-						}
-
-					}
-					theWindow.resize(resizeBg).trigger("resize");
-				});
-
-		</script>
-
-	<link rel="shortcut icon" type="image/x-icon" href="Images/site.ico" />
-	
 	</head>
 
 	<body>
 
+		<!--Site background image-->
 		<div>
   		<img src="Images/sunset.JPG" alt="" id="bg">
 		</div>
 
-		<div id="nav" class="nav">
+		<div id="nav" class="nav navMain">
 
-			<div class="row">
-				<div class="col-md-12">
-					<div data-toggle="collapse" data-target="#menuItemsDiv" class="nav-title"><span class="glyphicon glyphicon-menu-hamburger"></span></div>
-				</div>
+			<div class="col-md-12">
+					<div data-toggle="collapse" data-target="#menuItemsDiv" class="nav-title">
+						<span class="glyphicon glyphicon-menu-hamburger hamburger"></span>
+
+					</div>
+
+					<span class="glyphicon glyphicon-refresh changeBG" id="changeBG" onclick="backgroundSwitcher()" title="Switch theme"></span>
 			</div>
-			<div class="collapse voffset2" id="menuItemsDiv">
-				<div class="row">
-					<div class="col-md-12">
-						<a href="https://www.matthewbarbier.com/cpanel" target="_blank"><p class="nav-item">cPanel</p></a>
-				  </div>
-				</div>
+
+			<div class="collapse voffset3" id="menuItemsDiv">
+
 				<div class="row">
 					<div class="col-md-12">
 						<a href="https://uk.linkedin.com/in/matthew-barbier-028939b5" target="_blank"><p class="nav-item">LinkedIn</p></a>
 					</div>
 				</div>
+
 				<div class="row">
 					<div class="col-md-12">
 						<a href="https://www.flickr.com/photos/142604114@N06/" target="_blank"><p class="nav-item">Flickr</p></a>
 					</div>
 				</div>
+
 				<div class="row">
 					<div class="col-md-12">
 						<a href="https://github.com/SirBarbier?tab=repositories" target="_blank"><p class="nav-item">Github</p></a>
 					</div>
 				</div>
+
 				<div class="row">
 					<div class="col-md-12">
 						<a href="https://jsfiddle.net/user/matt_b/fiddles/" target="_blank"><p class="nav-item">JSFiddle</p></a>
 					</div>
 				</div>
+
 				<div class="row">
 					<div class="col-md-12">
 						<a href="http://steamcommunity.com/id/MattadorUk" target="_blank"><p class="nav-item">Steam</p></a>
 					</div>
 				</div>
-				
+
+				<div class="row">
+					<div class="col-md-12">
+						<a href="https://www.matthewbarbier.com/cpanel" target="_blank"><p class="nav-item">cPanel</p></a>
+				  </div>
 				</div>
+
+				<div class="row">
+					<div class="col-md-12">
+						<a href="#"><p class="nav-item" onclick="backgroundSwitcher()">Cycle bg</p></a>
+					</div>
+				</div>
+
+			</div>
 		</div>
 
-		<div class="container text-center" id="error">
+		<div class="container text-center">
 			<div class="row">
 				<div class="col-md-12">
-					<div class="voffset10">
+					<div class="voffset10" id="header">
 						<h1 class="banner">Welcome to matthewbarbier.com</h1>
 
 					</div>
