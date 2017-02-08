@@ -47,6 +47,12 @@
 
 				<div class="row">
 					<div class="col-md-12">
+						<a href="https://www.matthewbarbier.com" target="_blank"><p class="nav-item">Home</p></a>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-12">
 						<a href="https://uk.linkedin.com/in/matthew-barbier-028939b5" target="_blank"><p class="nav-item">LinkedIn</p></a>
 					</div>
 				</div>
@@ -91,8 +97,25 @@
 		</div>
 
 		<div class="voffset10" id="header">
-			<h1 class="banner title-banner">Welcome to matthewbarbier.com</h1>
+			<div class="banner banner-regular">
+			<?php
 
+			function IsNullOrEmptyString($question){
+			    return (!isset($question) || trim($question)==='');
+			}
+
+				include '../includes/test.php';
+				echo "Checking for variable.....</br></br>";
+
+				if (IsNullOrEmptyString($testVar))
+				{
+					echo "Retrieval of string variable from external file failed!";
+				}
+				else {
+						echo $testVar;
+				}
+			?>
+			</div>
 		</div>
 
 		<div class="container text-center">

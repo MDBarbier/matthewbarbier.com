@@ -68,10 +68,18 @@
 	text-align: center;
   /*left: 25%;*/
   z-index: 1;
-  font-weight: bold;
   font-family: 'Aileron-UltraLight';
-  font-size: 60px;
+}
+
+.title-banner {
+	font-weight: bold;
+	font-size: 60px;
   font-size: 4vw;
+}
+
+.banner-regular {
+	font-size: 20px;
+  font-size: 3vw;
 }
 
 a:link, a:active, a:visited {
