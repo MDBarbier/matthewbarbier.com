@@ -71,6 +71,16 @@
   font-family: 'Aileron-UltraLight';
 }
 
+.main-content {
+	position:fixed;
+	width: 100%;
+	z-index: 1;
+	top:30%;
+	font-family: 'Aileron-UltraLight';
+	font-size: 12px;
+  font-size: 1.5vw;
+}
+
 .title-banner {
 	font-weight: bold;
 	font-size: 60px;

@@ -23,6 +23,9 @@
 		<!--Site icon-->
 		<link rel="shortcut icon" type="image/x-icon" href="Images/site.ico" />
 
+    <script type="text/JavaScript" src="js/sha512.js"></script>
+    <script type="text/JavaScript" src="js/forms.js"></script>
+
 	</head>
 
 	<body>
@@ -44,6 +47,12 @@
 			</div>
 
 			<div class="collapse voffset3" id="menuItemsDiv">
+
+				<div class="row">
+					<div class="col-md-12">
+						<a href="https://www.matthewbarbier.com" target="_blank"><p class="nav-item">Home</p></a>
+					</div>
+				</div>
 
 				<div class="row">
 					<div class="col-md-12">
@@ -87,20 +96,11 @@
 					</div>
 				</div>
 
-				<div class="row">
-					<div class="col-md-12">
-						<button type="button" class="btn btn-danger btn-lg nav-item" onclick="location.href = 'login';">
-	          	<span class="glyphicon glyphicon-lock"></span> Login
-	        	</button>
-					</div>
-				</div>
-
 			</div>
 		</div>
 
 		<div class="voffset10" id="header">
-			<h1 class="banner title-banner">Welcome to matthewbarbier.com</h1>
-
+			<h1 class="banner title-banner">Login to matthewbarbier.com</h1>
 		</div>
 
     <!-- main page content div-->
@@ -109,7 +109,72 @@
         <div class="col-md-8">
 
           <!-- insert page content here-->
+          <?php
+          if (empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off')
+          {
+              echo "You do not have a secure SSL connection! \n";
+          }
+          else {
 
+            include_once '../includes/db_connect.php';
+            include_once '../includes/functions.php';
+
+            sec_session_start();
+
+            if (login_check($mysqli) == true) {
+                $logged = 'in';
+            } else {
+                $logged = 'out';
+            }
+
+            if (isset($_GET['error'])) {
+              $error = $_GET['error'];
+              echo '<p class="error">Error Logging In! Error: ' . $error . '</p>';
+            }
+            ?>
+
+            <form action="processloginproxy" method="post" name="login_form" class="form-inline">
+							<div class="form-group">
+								<label for="email">Email:</label>
+								<input type="text"
+											 id="email"
+											 name="email"
+											 class="form-control" />
+								<label for="password">Password:</label>
+								<input type="password"
+                       name="password"
+                       id="password"
+											 class="form-control"/>
+              	<input type="button"
+                       value="Login"
+                       onclick="formhash(this.form, this.form.password);"
+										   class="btn btn-lg btn-primary" />
+						  </div>
+
+            </form>
+
+            <?php
+                    if (login_check($mysqli) == true) {
+                                    echo '<p>Currently logged ' . $logged . ' as ' . htmlentities($_SESSION['username']) . '.</p>';
+
+                        ?>
+												<input type="button"
+					                     value="Logout"
+					                     onclick="location.href = 'logoutproxy';"
+															 class="btn btn-default"/>
+												<?php
+                    } else {
+                                    echo '<p>Currently logged ' . $logged . '.</p>';
+																		echo "<p>If you don't have a login, please register.</p>";
+																		?>
+																		<input type="button"
+											                     value="Register"
+											                     onclick="location.href = 'register';"
+																					 class="btn btn-default btn-lg"/>
+																		<?php
+                            }
+            }
+          ?>
 
         </div>
         <div class="col-md-2"></div>
@@ -121,13 +186,6 @@
 				<div class="col-md-12">
 
 					<div class="footer">
-
-							<?php
-							if (empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off')
-							{
-									echo "You do not have a secure SSL connection! \n";
-							}
-							?>
 
 					</div>
 

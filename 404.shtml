@@ -60,6 +60,10 @@ a {
   text-decoration: none;
 }
 </style>
+
+<!--Site icon-->
+<link rel="shortcut icon" type="image/x-icon" href="Images/site.ico" />
+
 </head>
 
 <body>

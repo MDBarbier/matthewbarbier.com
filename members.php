@@ -1,3 +1,10 @@
+<?php
+  include_once '../includes/db_connect.php';
+  include_once '../includes/functions.php';
+
+  sec_session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -47,6 +54,12 @@
 
 				<div class="row">
 					<div class="col-md-12">
+						<a href="https://www.matthewbarbier.com" target="_blank"><p class="nav-item">Home</p></a>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-12">
 						<a href="https://uk.linkedin.com/in/matthew-barbier-028939b5" target="_blank"><p class="nav-item">LinkedIn</p></a>
 					</div>
 				</div>
@@ -87,20 +100,11 @@
 					</div>
 				</div>
 
-				<div class="row">
-					<div class="col-md-12">
-						<button type="button" class="btn btn-danger btn-lg nav-item" onclick="location.href = 'login';">
-	          	<span class="glyphicon glyphicon-lock"></span> Login
-	        	</button>
-					</div>
-				</div>
-
 			</div>
 		</div>
 
 		<div class="voffset10" id="header">
-			<h1 class="banner title-banner">Welcome to matthewbarbier.com</h1>
-
+			<h1 class="banner title-banner">matthewbarbier.com members area</h1>
 		</div>
 
     <!-- main page content div-->
@@ -109,7 +113,14 @@
         <div class="col-md-8">
 
           <!-- insert page content here-->
-
+          <?php if (login_check($mysqli) == true) : ?>
+            <p>Welcome <?php echo htmlentities($_SESSION['username']); ?>!</p>
+            <p>This is the members area.</p>
+        <?php else : ?>
+            <p>
+                <span class="error">You are not authorized to access this page.</span> Please <a href="login">login</a>.
+            </p>
+        <?php endif; ?>
 
         </div>
         <div class="col-md-2"></div>

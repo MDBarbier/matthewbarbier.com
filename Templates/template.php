@@ -97,9 +97,21 @@
 		</div>
 
 		<div class="voffset10" id="header">
-			<h1 class="banner">Welcome to matthewbarbier.com</h1>
-
+			<h1 class="banner title-banner">Login to matthewbarbier.com</h1>
 		</div>
+
+    <!-- main page content div-->
+    <div class="row main-content">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+
+          <!-- insert page content here-->
+          
+
+        </div>
+        <div class="col-md-2"></div>
+
+    </div>
 
 		<div class="container text-center">
 			<div class="row">
