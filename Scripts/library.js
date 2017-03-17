@@ -99,3 +99,16 @@ function reloadBg(newSrc) {
   }
   theWindow.resize(resizeBg).trigger("resize");
 }
+
+function contactDiceServer(dieType)
+{
+      $.ajax({
+      type: "POST",
+      url: "rollDieHandler.php",
+      data: { dietype: dieType }
+    }).done(function( msg ) {
+      //window.alert( "You rolled: " + msg );
+      $('#result').html(msg);
+      $('#resultlabel').removeClass('hidden');
+    });
+}

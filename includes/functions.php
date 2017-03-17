@@ -190,3 +190,7 @@ function esc_url($url) {
         return $url;
     }
 }
+
+function IsNullOrEmptyString($question){
+    return (!isset($question) || trim($question)==='');
+}

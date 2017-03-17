@@ -100,6 +100,24 @@
 					</div>
 				</div>
 
+        <?php if (login_check($mysqli) == true) : ?>
+          <div class="row">
+  					<div class="col-md-12">
+  						<button type="button" class="btn btn-danger btn-lg nav-item" onclick="location.href = 'logoutproxy';">
+  	          	<span class="glyphicon glyphicon-lock"></span> Logout
+  	        	</button>
+  					</div>
+  				</div>
+      <?php else : ?>
+        <div class="row">
+          <div class="col-md-12">
+            <button type="button" class="btn btn-danger btn-lg nav-item" onclick="location.href = 'login';">
+              <span class="glyphicon glyphicon-lock"></span> Login
+            </button>
+          </div>
+        </div>
+      <?php endif; ?>
+
 			</div>
 		</div>
 

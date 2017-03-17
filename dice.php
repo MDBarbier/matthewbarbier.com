@@ -1,10 +1,17 @@
+<?php
+  include_once '../includes/db_connect.php';
+  include_once '../includes/functions.php';
+  //$page = $_SERVER['PHP_SELF'];
+  //$sec = "10";
+  sec_session_start();
+?>
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>matthewbarbier.com - 404 page not found</title>
+		<title>matthewbarbier.com</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" >
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <!--<meta http-equiv="refresh" content="<?php //echo $sec?>;URL='<?php //echo $page?>'">-->
 		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
@@ -23,14 +30,11 @@
 		<!--Site icon-->
 		<link rel="shortcut icon" type="image/x-icon" href="Images/site.ico" />
 
+
 	</head>
 
 	<body>
 
-		<!--Site background image-->
-		<div>
-  		<img src="Images/sunset.JPG" alt="" id="bg">
-		</div>
 
 		<div id="nav" class="nav navMain">
 
@@ -40,7 +44,6 @@
 
 					</div>
 
-					<span class="glyphicon glyphicon-refresh changeBG" id="changeBG" onclick="backgroundSwitcher()" title="Switch theme"></span>
 			</div>
 
 			<div class="collapse voffset3" id="menuItemsDiv">
@@ -93,11 +96,29 @@
 					</div>
 				</div>
 
+				<?php if (login_check($mysqli) == true) : ?>
+          <div class="row">
+  					<div class="col-md-12">
+  						<button type="button" class="btn btn-danger btn-lg nav-item" onclick="location.href = 'logoutproxy';">
+  	          	<span class="glyphicon glyphicon-lock"></span> Logout
+  	        	</button>
+  					</div>
+  				</div>
+      <?php else : ?>
+        <div class="row">
+          <div class="col-md-12">
+            <button type="button" class="btn btn-danger btn-lg nav-item" onclick="location.href = 'login';">
+              <span class="glyphicon glyphicon-lock"></span> Login
+            </button>
+          </div>
+        </div>
+      <?php endif; ?>
+
 			</div>
 		</div>
 
 		<div class="voffset10" id="header">
-			<h1 class="banner title-banner">This is not the page you are looking for.</h1>
+			<h1 class="banner title-banner">Dice roller</h1>
 		</div>
 
     <!-- main page content div-->
@@ -106,10 +127,28 @@
         <div class="col-md-8">
 
           <!-- insert page content here-->
-          <p>Sorry, the page you requested, "matthewbarbier.com<!--#echo var="REQUEST_URI" -->", does not exist.</p>
+          <?php if (login_check($mysqli) == true) : ?>
+            <div class="row">
+    					<div class="col-md-12">
+                <input type="button" value="Roll D4" onclick="contactDiceServer('D4');" class="btn btn-default" style="font-size:x-large;">
+                <input type="button" value="Roll D6" onclick="contactDiceServer('D6');" class="btn btn-default" style="font-size:x-large;">
+                <input type="button" value="Roll D8" onclick="contactDiceServer('D8');" class="btn btn-default" style="font-size:x-large;">
+                <input type="button" value="Roll D10" onclick="contactDiceServer('D10');" class="btn btn-default" style="font-size:x-large;">
+                <input type="button" value="Roll D12" onclick="contactDiceServer('D12');" class="btn btn-default" style="font-size:x-large;">
+                <input type="button" value="Roll D20" onclick="contactDiceServer('D20');" class="btn btn-default" style="font-size:x-large;">
+    					</div>
+    				</div>
+        <?php else : ?>
+          <div class="row">
+            <div class="col-md-12">
+              <h1>You must be logged in to use this tool. Use the menu on the left, click "Login", then either log in or register.</h1>
+            </div>
+          </div>
+        <?php endif; ?>
 
-          <p>Try typing the URL again or use the menu options on the left.</p>
-
+            <br />
+          <label for="result" class="voffset6 hidden" id="resultlabel">Result:</label>
+          <div id="result" style="font-size:xx-large"></div>
         </div>
         <div class="col-md-2"></div>
 
